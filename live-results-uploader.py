@@ -48,7 +48,7 @@ class LiveResultsUploader:
         else:
             f = open(self.results_path, 'r')
         
-        results = f.read()
+        results = unicode(f.read()).encode()
         f.close()
         
         r = requests.post(self.results_url(), data=results, auth=(self.user_email, self.user_password))
