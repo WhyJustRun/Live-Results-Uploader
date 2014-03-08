@@ -3,6 +3,7 @@ from time import sleep
 import os.path
 from datetime import datetime
 import glob
+import getpass
 
 class LiveResultsUploader:
     def __init__(self):
@@ -22,7 +23,7 @@ class LiveResultsUploader:
         while (self.event_id is None or self.event_id == 0):
             self.event_id = int(input("Enter the event ID (look for the number in the URL to the event page on WhyJustRun): "))
         self.user_email = input("Enter your WhyJustRun account email: ")
-        self.user_password = input("Enter your WhyJustRun account password: ")
+        self.user_password = getpass.getpass("Enter your WhyJustRun account password: ")
         while (self.results_path is None or (self.results_path.lower() != 'meos' and not os.path.isfile(self.results_path))):
             self.results_path = input("Enter the path to the IOF XML 3.0 results list file (if using MeOS, just type \"meos\"): ")
 
