@@ -6,7 +6,7 @@ Python live results upload script
 ## Requirements
 
 - [Python 3.x](http://www.python.org/download/)
-- [Pip](http://www.pip-installer.org/en/latest/installing.html#install-or-upgrade-pip)
+- [Pip](http://www.pip-installer.org/en/latest/installing.html#install-or-upgrade-pip) (comes installed with Python in 3.4 and higher!)
 - Requests library for Python 3 (do `pip install requests`)
 
 ## Running
